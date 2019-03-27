@@ -2,19 +2,39 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.jack.androidbase">
 
+    <!-- To auto-complete the email text field in the login form with the user's emails -->
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.READ_PROFILE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity android:name=".activity.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".activity.UIMainActivity" />
+        <activity android:name=".activity.IntentMainActivity" />
+        <activity android:name=".activity.ServicesMainActivity" />
+        <activity android:name=".activity.IntentTransferDataActivity" />
+        <activity android:name=".activity.UINotiDetailActivity" />
+        <activity android:name=".activity.UINotiActivity" />
+        <activity android:name=".activity.UIDialogActivity" />
+        <activity android:name=".activity.UIProgressActivity" />
+        <activity android:name=".activity.UIGridLayoutActivity" />
+        <activity android:name=".activity.UITableLayoutActivity" />
+        <activity
+            android:name=".activity.UIUserLoginActivity"
+            android:label="@string/title_activity_uiuser_login" />
+        <activity android:name=".activity.UIUserRegActivity" />
+        <activity android:name=".activity.UIUserCenterActivity"></activity>
     </application>
 
 </manifest>
