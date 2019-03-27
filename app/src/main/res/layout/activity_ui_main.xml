@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".activity.UIMainActivity">
+
+    <Button
+        android:id="@+id/btn_back1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:text="@string/back_to"/>
+
+    <TextView
+        android:id="@+id/ui_base_case"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_below="@id/btn_back1"
+        android:text="布局基础实例"/>
+
+    <Button
+        android:id="@+id/ui_toast"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ui_base_case"
+        android:onClick="showToast"
+        android:text="Toast"/>
+
+    <Button
+        android:id="@+id/ui_show_notification"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ui_base_case"
+        android:layout_toRightOf="@id/ui_toast"
+        android:onClick="jumpNotification"
+        android:text="Notification通知栏"/>
+
+    <Button
+        android:id="@+id/ui_alert_dialog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ui_base_case"
+        android:layout_toRightOf="@id/ui_show_notification"
+        android:onClick="alertDialog"
+        android:text="alertDialog弹窗"/>
+
+    <Button
+        android:id="@+id/ui_progress_dialog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ui_alert_dialog"
+        android:onClick="progressDialog"
+        android:layout_marginBottom="16dp"
+        android:text="进度条和时间日期选择器"/>
+
+    <Button
+        android:id="@+id/ui_grid_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ui_progress_dialog"
+        android:onClick="gridLayout"
+        android:text="网格布局"/>
+
+    <Button
+        android:id="@+id/ui_table_dialog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ui_progress_dialog"
+        android:layout_toRightOf="@id/ui_grid_layout"
+        android:onClick="tableLayout"
+        android:text="表格布局"/>
+
+    <TextView
+        android:id="@+id/ui_com_case"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_below="@id/ui_table_dialog"
+        android:text="布局综合实例"/>
+
+    <Button
+        android:id="@+id/ui_login_page"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ui_com_case"
+        android:onClick="loginPage"
+        android:text="用户系统(SQLite存数据)"/>
+</RelativeLayout>
