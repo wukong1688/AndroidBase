@@ -65,14 +65,49 @@ public class UIMainActivity extends AppCompatActivity {
         startActivity(new Intent(this, UITableLayoutActivity.class));
     }
 
-    //登陆界面
+    //用户系统-登陆
     protected void loginPage(View v) {
         startActivity(new Intent(this, UIUserLoginActivity.class));
     }
 
-    //注册界面
-    protected void regPage(View v) {
-        startActivity(new Intent(this, UIUserRegActivity.class));
+    //九图
+    protected void nineDraw(View v) {
+        startActivity(new Intent(this, UINineDrawActivity.class));
+    }
+
+    //基础控件
+    protected void basicWidget(View v) {
+        startActivity(new Intent(this, UIBasicWidgetActivity.class));
+    }
+
+    //基础listView
+    protected void baseListView(View v) {
+        startActivity(new Intent(this, UIBaseListViewActivity.class));
+    }
+
+    //基础gridView-封装adapter
+    protected void baseListViewCustom(View v) {
+        startActivity(new Intent(this, UIBaseListViewCustomActivity.class));
+    }
+
+    //基础gridView
+    protected void baseGridView(View v) {
+        startActivity(new Intent(this, UIBaseGridViewActivity.class));
+    }
+
+    //基础Spinner-弹窗
+    protected void baseSpinner(View v) {
+        startActivity(new Intent(this, UISpinnerActivity.class));
+    }
+
+    //Fragment
+    protected void fragCase1(View v) {
+        startActivity(new Intent(this, UIFragment1Activity.class));
+    }
+
+    //Fragment+ViewPaper实现底部四个菜单
+    protected void fragCase2(View v) {
+        startActivity(new Intent(this, UIFragment2Activity.class));
     }
 
 }

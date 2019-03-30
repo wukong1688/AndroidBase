@@ -6,13 +6,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.jack.androidbase.R;
-
-import user.UserDataManager;
 
 public class UIUserCenterActivity extends AppCompatActivity implements View.OnClickListener{
     private SharedPreferences login_sp;

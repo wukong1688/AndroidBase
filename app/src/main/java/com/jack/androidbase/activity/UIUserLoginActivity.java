@@ -13,7 +13,7 @@ import android.widget.Toast;
 
 import com.jack.androidbase.R;
 
-import user.UserDataManager;
+import com.jack.androidbase.bean.UserDataManager;
 
 public class UIUserLoginActivity extends AppCompatActivity implements View.OnClickListener {
     private EditText mAccount;                        //用户名编辑

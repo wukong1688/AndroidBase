@@ -1,4 +1,4 @@
-package user;
+package com.jack.androidbase.bean;
 
 import android.content.ContentValues;
 import android.content.Context;

@@ -34,7 +34,15 @@
             android:name=".activity.UIUserLoginActivity"
             android:label="@string/title_activity_uiuser_login" />
         <activity android:name=".activity.UIUserRegActivity" />
-        <activity android:name=".activity.UIUserCenterActivity"></activity>
+        <activity android:name=".activity.UIUserCenterActivity" />
+        <activity android:name=".activity.UINineDrawActivity" />
+        <activity android:name=".activity.UIBasicWidgetActivity" />
+        <activity android:name=".activity.UIBaseListViewActivity" />
+        <activity android:name=".activity.UIBaseGridViewActivity" />
+        <activity android:name=".activity.UIBaseListViewCustomActivity" />
+        <activity android:name=".activity.UISpinnerActivity" />
+        <activity android:name=".activity.UIFragment1Activity" />
+        <activity android:name=".activity.UIFragment2Activity"></activity>
     </application>
 
 </manifest>

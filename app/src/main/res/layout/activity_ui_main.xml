@@ -1,94 +1,191 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context=".activity.UIMainActivity">
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
 
-    <Button
-        android:id="@+id/btn_back1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:text="@string/back_to"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        tools:context=".activity.UIMainActivity">
 
-    <TextView
-        android:id="@+id/ui_base_case"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:layout_below="@id/btn_back1"
-        android:text="布局基础实例"/>
 
-    <Button
-        android:id="@+id/ui_toast"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/ui_base_case"
-        android:onClick="showToast"
-        android:text="Toast"/>
+        <Button
+            android:id="@+id/btn_back1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:text="@string/back_to" />
 
-    <Button
-        android:id="@+id/ui_show_notification"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/ui_base_case"
-        android:layout_toRightOf="@id/ui_toast"
-        android:onClick="jumpNotification"
-        android:text="Notification通知栏"/>
+        <TextView
+            android:id="@+id/ui_base_case"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btn_back1"
+            android:layout_marginTop="20dp"
+            android:text="布局基础实例" />
 
-    <Button
-        android:id="@+id/ui_alert_dialog"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/ui_base_case"
-        android:layout_toRightOf="@id/ui_show_notification"
-        android:onClick="alertDialog"
-        android:text="alertDialog弹窗"/>
+        <Button
+            android:id="@+id/ui_toast"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ui_base_case"
+            android:onClick="showToast"
+            android:text="Toast" />
 
-    <Button
-        android:id="@+id/ui_progress_dialog"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/ui_alert_dialog"
-        android:onClick="progressDialog"
-        android:layout_marginBottom="16dp"
-        android:text="进度条和时间日期选择器"/>
+        <Button
+            android:id="@+id/ui_show_notification"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ui_base_case"
+            android:layout_toRightOf="@id/ui_toast"
+            android:onClick="jumpNotification"
+            android:text="Notification通知栏" />
 
-    <Button
-        android:id="@+id/ui_grid_layout"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/ui_progress_dialog"
-        android:onClick="gridLayout"
-        android:text="网格布局"/>
+        <Button
+            android:id="@+id/ui_alert_dialog"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ui_base_case"
+            android:layout_toRightOf="@id/ui_show_notification"
+            android:onClick="alertDialog"
+            android:text="alertDialog弹窗" />
 
-    <Button
-        android:id="@+id/ui_table_dialog"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/ui_progress_dialog"
-        android:layout_toRightOf="@id/ui_grid_layout"
-        android:onClick="tableLayout"
-        android:text="表格布局"/>
+        <Button
+            android:id="@+id/ui_progress_dialog"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ui_alert_dialog"
+            android:layout_marginBottom="16dp"
+            android:onClick="progressDialog"
+            android:text="进度条和时间日期选择器" />
 
-    <TextView
-        android:id="@+id/ui_com_case"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:layout_below="@id/ui_table_dialog"
-        android:text="布局综合实例"/>
+        <Button
+            android:id="@+id/ui_nine_draw"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ui_alert_dialog"
+            android:layout_marginBottom="16dp"
+            android:layout_toRightOf="@id/ui_progress_dialog"
+            android:onClick="nineDraw"
+            android:text="九图" />
 
-    <Button
-        android:id="@+id/ui_login_page"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/ui_com_case"
-        android:onClick="loginPage"
-        android:text="用户系统(SQLite存数据)"/>
-</RelativeLayout>
+        <Button
+            android:id="@+id/ui_basic_widget"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ui_alert_dialog"
+            android:layout_marginBottom="16dp"
+            android:layout_toRightOf="@id/ui_nine_draw"
+            android:onClick="basicWidget"
+            android:text="基础控件" />
+
+        <Button
+            android:id="@+id/ui_basic_list_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ui_progress_dialog"
+            android:layout_marginBottom="16dp"
+            android:onClick="baseListView"
+            android:text="ListView"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/ui_basic_list_view_custom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ui_progress_dialog"
+            android:layout_marginBottom="16dp"
+            android:layout_toRightOf="@id/ui_basic_list_view"
+            android:onClick="baseListViewCustom"
+            android:text="ListView2"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/ui_basic_grid_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ui_basic_list_view"
+            android:layout_marginBottom="16dp"
+            android:onClick="baseGridView"
+            android:text="GridView"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/ui_basic_spinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ui_basic_list_view"
+            android:layout_marginBottom="16dp"
+            android:layout_toRightOf="@id/ui_basic_grid_view"
+            android:onClick="baseSpinner"
+            android:text="Spinner"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/ui_grid_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ui_basic_grid_view"
+            android:onClick="gridLayout"
+            android:text="网格布局" />
+
+        <Button
+            android:id="@+id/ui_table_dialog"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ui_basic_grid_view"
+            android:layout_toRightOf="@id/ui_grid_layout"
+            android:onClick="tableLayout"
+            android:text="表格布局" />
+
+        <TextView
+            android:id="@+id/ui_text_frag_case"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ui_table_dialog"
+            android:layout_marginTop="20dp"
+            android:text="Fragment综合实例" />
+
+        <Button
+            android:id="@+id/ui_frag_case_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ui_text_frag_case"
+            android:onClick="fragCase1"
+            android:textAllCaps="false"
+            android:text="Fragment1" />
+
+        <Button
+            android:id="@+id/ui_frag_case_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ui_text_frag_case"
+            android:layout_toRightOf="@id/ui_frag_case_1"
+            android:onClick="fragCase2"
+            android:textAllCaps="false"
+            android:text="Fragment+ViewPaper实现底部四个菜单" />
+
+        <TextView
+            android:id="@+id/ui_com_case"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ui_frag_case_1"
+            android:layout_marginTop="20dp"
+            android:text="布局综合实例" />
+
+        <Button
+            android:id="@+id/ui_login_page"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ui_com_case"
+            android:onClick="loginPage"
+            android:text="用户系统(SQLite存数据)" />
+
+
+    </RelativeLayout>
+</ScrollView>

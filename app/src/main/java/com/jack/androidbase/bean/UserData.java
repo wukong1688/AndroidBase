@@ -1,4 +1,4 @@
-package user;
+package com.jack.androidbase.bean;
 
 public class UserData {
     private String userName;                  //用户名

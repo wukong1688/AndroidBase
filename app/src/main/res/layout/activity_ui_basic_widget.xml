@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:overScrollMode="ifContentScrolls">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        tools:context=".activity.UIBasicWidgetActivity">
+
+        <TextView
+            android:id="@+id/ui_base_text_view1"
+            android:layout_width="260dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:background="#cccccc"
+            android:gravity="center"
+            android:text="普通文本TextView"
+            android:textColor="#000000"
+            android:textSize="18sp"
+            android:textStyle="bold|italic" />
+
+        <TextView
+            android:id="@+id/ui_base_text_view2"
+            android:layout_width="260dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ui_base_text_view1"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/txt_rectborder"
+            android:gravity="center"
+            android:text="矩形边框文本TextView"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/ui_base_text_view3"
+            android:layout_width="260dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ui_base_text_view2"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/txt_radiuborder"
+            android:gravity="center"
+            android:text="圆角边框文本TextView"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/ui_base_text_view4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ui_base_text_view3"
+            android:layout_marginBottom="10dp"
+            android:autoLink="all"
+            android:gravity="left"
+            android:text="自动识别连接类型 百度：http://www.baidu.com tel:18655423482 010-99884276"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/ui_base_text_view5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ui_base_text_view4"
+            android:layout_marginBottom="10dp"
+            android:ellipsize="marquee"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:singleLine="true"
+            android:text="你整天说着日了狗日了狗，但是你却没有来，呵呵呵呵呵呵呵呵呵呵~"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/ui_base_text_view6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ui_base_text_view5"
+            android:layout_marginBottom="10dp" />
+
+        <TextView
+            android:id="@+id/ui_base_text_view7"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ui_base_text_view6"
+            android:layout_marginBottom="30dp" />
+
+        <Button
+            android:id="@+id/ui_base_btn_1"
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:layout_below="@id/ui_base_text_view7"
+            android:layout_marginBottom="30dp"
+            android:background="@drawable/bbuton_danger_rounded"
+            android:text="按钮" />
+
+
+        <ImageView
+            android:id="@+id/ui_base_img_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ui_base_btn_1"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/img_test" />
+
+        <ImageView
+            android:id="@+id/ui_base_img_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ui_base_img_1"
+            android:layout_marginBottom="10dp"
+            android:src="@drawable/img_test" />
+
+        <ImageView
+            android:id="@+id/ui_base_img_3"
+            android:layout_width="200dp"
+            android:layout_height="100dp"
+            android:layout_below="@id/ui_base_img_2"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/img_test" />
+
+        <ImageView
+            android:id="@+id/ui_base_img_4"
+            android:layout_width="200dp"
+            android:layout_height="100dp"
+            android:layout_below="@id/ui_base_img_3"
+            android:layout_marginBottom="10dp"
+            android:src="@drawable/img_test" />
+
+        <com.jack.androidbase.tools.RoundImageView
+            android:id="@+id/ui_base_img_5"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_below="@id/ui_base_img_4"
+            android:layout_marginBottom="30dp" />
+
+        <LinearLayout
+            android:id="@+id/ui_base_lin_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ui_base_img_5"
+            android:layout_marginBottom="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="请选择性别"
+                android:textSize="23dp" />
+
+            <RadioGroup
+                android:id="@+id/ui_base_radioGrp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/ui_base_radioMan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:text="男" />
+
+                <RadioButton
+                    android:id="@+id/ui_base_radioWoman"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="女" />
+            </RadioGroup>
+
+            <Button
+                android:id="@+id/ui_base_radioPost"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="提交" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ui_base_lin_2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ui_base_lin_1"
+            android:layout_marginBottom="30dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="请选择喜欢的颜色"
+                android:textSize="23dp" />
+
+            <CheckBox
+                android:id="@+id/ui_base_ck_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:button="@drawable/checkbox_style"
+                android:text="红色" />
+
+            <CheckBox
+                android:id="@+id/ui_base_ck_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:button="@drawable/checkbox_style"
+                android:text="绿色" />
+
+            <CheckBox
+                android:id="@+id/ui_base_ck_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="蓝色" />
+
+            <Button
+                android:id="@+id/ui_base_ckPost"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="提交" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ui_base_lin_3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/ui_base_lin_2"
+            android:orientation="vertical">
+
+            <ToggleButton
+                android:id="@+id/tbtn_open"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:textOff="关闭声音"
+                android:textOn="打开声音" />
+
+            <Switch
+                android:id="@+id/swh_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textOff="Off"
+                android:textOn="On" />
+
+            <ProgressBar
+                style="@android:style/Widget.ProgressBar.Large"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <SeekBar
+                android:id="@+id/sb_normal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxHeight="5.0dp"
+                android:minHeight="5.0dp"/>
+
+            <RatingBar
+                android:id="@+id/rb_normal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+    </RelativeLayout>
+</ScrollView>
+
