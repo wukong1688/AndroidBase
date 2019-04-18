@@ -14,15 +14,12 @@ import com.jack.androidbase.R;
 import java.util.ArrayList;
 import java.util.LinkedList;
 
-public abstract class CustomAdapter<T> extends BaseAdapter {
+public abstract class CustomListViewAdapter<T> extends BaseAdapter {
 
     private ArrayList<T> mData;
     private int mLayoutRes;           //布局id
 
-    public CustomAdapter() {
-    }
-
-    public CustomAdapter(ArrayList<T> mData, int mLayoutRes) {
+    public CustomListViewAdapter(ArrayList<T> mData, int mLayoutRes) {
         this.mData = mData;
         this.mLayoutRes = mLayoutRes;
     }
@@ -41,6 +38,7 @@ public abstract class CustomAdapter<T> extends BaseAdapter {
     public long getItemId(int position) {
         return position;
     }
+
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         ViewHolder holder = ViewHolder.bind(parent.getContext(), convertView, parent, mLayoutRes
@@ -61,7 +59,7 @@ public abstract class CustomAdapter<T> extends BaseAdapter {
     }
 
     //往特定位置，添加一个元素
-    public void add(int position,T data){
+    public void add(int position, T data) {
         if (mData == null) {
             mData = new ArrayList<>();
         }
@@ -70,21 +68,21 @@ public abstract class CustomAdapter<T> extends BaseAdapter {
     }
 
     public void remove(T data) {
-        if(mData != null) {
+        if (mData != null) {
             mData.remove(data);
         }
         notifyDataSetChanged();
     }
 
     public void remove(int position) {
-        if(mData != null) {
+        if (mData != null) {
             mData.remove(position);
         }
         notifyDataSetChanged();
     }
 
     public void clear() {
-        if(mData != null) {
+        if (mData != null) {
             mData.clear();
         }
         notifyDataSetChanged();

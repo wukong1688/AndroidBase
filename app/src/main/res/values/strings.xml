@@ -3,6 +3,8 @@
     <string name="main_btn1">UI布局</string>
     <string name="main_btn2">Intent</string>
     <string name="main_btn3">Service</string>
+    <string name="main_btn4">Media相关</string>
+    <string name="main_btn5">其他</string>
 
     <string name="back_to">返回</string>
 

@@ -3,24 +3,27 @@ package com.jack.androidbase.activity;
 import android.content.Context;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import com.jack.androidbase.R;
-import com.jack.androidbase.adapter.CustomAdapter;
+import com.jack.androidbase.adapter.CustomListViewAdapter;
 import com.jack.androidbase.bean.Animal;
 
 import java.util.ArrayList;
 import java.util.List;
 
 /**
- * CustomAdapter 为封装好的adapter，用于直接new使用
+ * CustomListViewAdapter 为封装好的adapter，用于直接new使用
  */
 public class UIBaseListViewCustomActivity extends AppCompatActivity {
     private Context mContext;
-    private ListView list_book,list_book2;
+    private ListView list_book, list_book2;
 
-    private CustomAdapter<Animal> myAdapter1 = null;
-    private CustomAdapter<Animal> myAdapter2 = null;
+    private CustomListViewAdapter<Animal> myAdapter1 = null;
+    private CustomListViewAdapter<Animal> myAdapter2 = null;
     private List<Animal> mData1 = null;
     private List<Animal> mData2 = null;
 
@@ -44,7 +47,7 @@ public class UIBaseListViewCustomActivity extends AppCompatActivity {
         mData1.add(new Animal("鸭说", "你是鸭么?", R.drawable.avatar_3));
 
         //Adapter初始化
-        myAdapter1 = new CustomAdapter<Animal>((ArrayList) mData1, R.layout.item_list_animal) {
+        myAdapter1 = new CustomListViewAdapter<Animal>((ArrayList) mData1, R.layout.item_list_animal) {
             @Override
             public void bindView(ViewHolder holder, Animal obj) {
                 holder.setImageResource(R.id.img_icon, obj.getaIcon());
@@ -54,6 +57,13 @@ public class UIBaseListViewCustomActivity extends AppCompatActivity {
 
         //ListView设置下Adapter：
         list_book.setAdapter(myAdapter1);
+
+        list_book.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Toast.makeText(mContext, "你点击了~" + position + "~项", Toast.LENGTH_SHORT).show();
+            }
+        });
     }
 
     private void initList2() {
@@ -66,7 +76,7 @@ public class UIBaseListViewCustomActivity extends AppCompatActivity {
         mData2.add(new Animal("他说", "你是鸭么?", R.drawable.avatar_8));
 
         //Adapter初始化
-        myAdapter2 = new CustomAdapter<Animal>((ArrayList) mData2, R.layout.item_list_animal) {
+        myAdapter2 = new CustomListViewAdapter<Animal>((ArrayList) mData2, R.layout.item_list_animal) {
             @Override
             public void bindView(ViewHolder holder, Animal obj) {
                 holder.setImageResource(R.id.img_icon, obj.getaIcon());

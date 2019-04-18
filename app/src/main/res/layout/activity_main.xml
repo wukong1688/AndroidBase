@@ -22,6 +22,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/btn1"
         android:layout_centerHorizontal="true"
+        android:textAllCaps="false"
         android:text="@string/main_btn2"/>
 
     <Button
@@ -31,6 +32,27 @@
         android:layout_below="@id/btn2"
         android:layout_centerHorizontal="true"
         android:onClick="btn3Click"
+        android:textAllCaps="false"
         android:text="@string/main_btn3"/>
+
+    <Button
+        android:id="@+id/btn4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btn3"
+        android:layout_centerHorizontal="true"
+        android:onClick="btn4Click"
+        android:textAllCaps="false"
+        android:text="@string/main_btn4"/>
+
+    <Button
+        android:id="@+id/btn5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btn4"
+        android:layout_centerHorizontal="true"
+        android:onClick="btn5Click"
+        android:textAllCaps="false"
+        android:text="@string/main_btn5"/>
 
 </RelativeLayout>

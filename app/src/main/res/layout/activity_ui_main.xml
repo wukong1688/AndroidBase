@@ -104,6 +104,27 @@
             android:onClick="baseListViewCustom"
             android:text="ListView2"
             android:textAllCaps="false" />
+        <Button
+            android:id="@+id/ui_basic_recycler_view_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ui_progress_dialog"
+            android:layout_marginBottom="16dp"
+            android:layout_toRightOf="@id/ui_basic_list_view_custom"
+            android:onClick="recyclerView1"
+            android:text="RecyView1"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/ui_basic_recycler_view_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ui_progress_dialog"
+            android:layout_marginBottom="16dp"
+            android:layout_toRightOf="@id/ui_basic_recycler_view_1"
+            android:onClick="recyclerView2"
+            android:text="RecyView2"
+            android:textAllCaps="false" />
 
         <Button
             android:id="@+id/ui_basic_grid_view"
@@ -185,6 +206,23 @@
             android:layout_below="@id/ui_com_case"
             android:onClick="loginPage"
             android:text="用户系统(SQLite存数据)" />
+
+        <TextView
+            android:id="@+id/ui_other"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ui_login_page"
+            android:layout_marginTop="20dp"
+            android:text="其他" />
+
+        <Button
+            android:id="@+id/ui_edit_text_watcher"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ui_com_case"
+            android:onClick="editTextWatcher"
+            android:textAllCaps="false"
+            android:text="EditText输入监听" />
 
 
     </RelativeLayout>

@@ -49,5 +49,13 @@ public class MainActivity extends AppCompatActivity {
         startActivityForResult(intent, 3);
     }
 
+    public void btn4Click(View v) {
+        Intent intent = new Intent(MainActivity.this, MediaMainActivity.class);
+        startActivityForResult(intent, 4);
+    }
 
+    public void btn5Click(View v) {
+        Intent intent = new Intent(MainActivity.this, MainOtherActivity.class);
+        startActivityForResult(intent, 5);
+    }
 }

@@ -12,5 +12,12 @@
     <color name="text_topbar">#694E42</color>
     <color name="div_white">#E5E5E5</color>
 
+    <color name="reveal_color">#FFFFFF</color>
+    <color name="bottom_color">#3086E4</color>
+    <color name="bottom_bg">#40BAF8</color>
+    <color name="frame_search">#ADAEAD</color>
+    <color name="background_white">#FFFFFF</color>
+    <color name="back_red">#e75049</color>
+
 
 </resources>

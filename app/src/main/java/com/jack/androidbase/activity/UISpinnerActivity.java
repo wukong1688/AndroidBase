@@ -11,7 +11,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.jack.androidbase.R;
-import com.jack.androidbase.adapter.CustomAdapter;
+import com.jack.androidbase.adapter.CustomListViewAdapter;
 import com.jack.androidbase.bean.Hero;
 
 import java.util.ArrayList;
@@ -44,7 +44,7 @@ public class UISpinnerActivity extends AppCompatActivity implements AdapterView.
         mData.add(new Hero(R.drawable.avatar_2, "诺克萨斯之手：德莱厄斯（Darius）"));
         mData.add(new Hero(R.drawable.avatar_3, "无极剑圣：易（Yi）"));
 
-        myAdadpter = new CustomAdapter<Hero>(mData, R.layout.item_spin_hero) {
+        myAdadpter = new CustomListViewAdapter<Hero>(mData, R.layout.item_spin_hero) {
             @Override
             public void bindView(ViewHolder holder, Hero obj) {
                 holder.setImageResource(R.id.img_icon, obj.gethIcon());

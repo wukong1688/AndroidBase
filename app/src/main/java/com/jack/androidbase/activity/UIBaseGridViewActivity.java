@@ -10,7 +10,7 @@ import android.widget.GridView;
 import android.widget.Toast;
 
 import com.jack.androidbase.R;
-import com.jack.androidbase.adapter.CustomAdapter;
+import com.jack.androidbase.adapter.CustomListViewAdapter;
 import com.jack.androidbase.bean.Icon;
 
 import java.util.ArrayList;
@@ -38,12 +38,8 @@ public class UIBaseGridViewActivity extends AppCompatActivity {
         mData.add(new Icon(R.drawable.avatar_1, "图标1"));
         mData.add(new Icon(R.drawable.avatar_2, "图标2"));
         mData.add(new Icon(R.drawable.avatar_3, "图标3"));
-        mData.add(new Icon(R.drawable.avatar_4, "图标4"));
-        mData.add(new Icon(R.drawable.avatar_5, "图标5"));
-        mData.add(new Icon(R.drawable.avatar_6, "图标6"));
-        mData.add(new Icon(R.drawable.avatar_7, "图标7"));
 
-        mAdapter = new CustomAdapter<Icon>(mData, R.layout.item_grid_icon) {
+        mAdapter = new CustomListViewAdapter<Icon>(mData, R.layout.item_grid_icon) {
             @Override
             public void bindView(ViewHolder holder, Icon obj) {
                 holder.setImageResource(R.id.img_icon, obj.getiId());

@@ -6,6 +6,11 @@
     <uses-permission android:name="android.permission.GET_ACCOUNTS" />
     <uses-permission android:name="android.permission.READ_PROFILE" />
     <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.WRITE_CONTACTS"/>
+    <uses-permission android:name="android.permission.WRITE_PROFILE"/>
+    <uses-permission android:name="android.permission.INTERNET" />
+	<uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.READ_SMS"/>
 
     <application
         android:allowBackup="true"
@@ -42,7 +47,34 @@
         <activity android:name=".activity.UIBaseListViewCustomActivity" />
         <activity android:name=".activity.UISpinnerActivity" />
         <activity android:name=".activity.UIFragment1Activity" />
-        <activity android:name=".activity.UIFragment2Activity"></activity>
+        <activity android:name=".activity.UIFragment2Activity" />
+        <activity android:name=".activity.UIEditTextWatchActivity" />
+        <activity android:name=".activity.MediaMainActivity" />
+        <activity android:name=".activity.UIRecyclerView1Activity" />
+        <activity android:name=".activity.UIRecyclerView2Activity" />
+        <activity android:name=".activity.MainOtherActivity"/>
+
+        <service android:name=".tools.ServiceDemo">
+            <intent-filter>
+                <action android:name="com.jack.androidbase.tools.SERVICE_DEMO" />
+            </intent-filter>
+        </service>
+        <service
+            android:name=".tools.ServiceDemo2"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.jack.androidbase.tools.SERVICE_DEMO2" />
+            </intent-filter>
+        </service>
+
+        <provider
+            android:authorities="com.jack.androidbase.providers.myprovider"
+            android:name="com.jack.androidbase.adapter.NameContentProvider"
+            android:exported="true"/>
     </application>
+
+
+
+
 
 </manifest>

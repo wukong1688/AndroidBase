@@ -90,6 +90,16 @@ public class UIMainActivity extends AppCompatActivity {
         startActivity(new Intent(this, UIBaseListViewCustomActivity.class));
     }
 
+    //基础gridView-recyclerView1
+    protected void recyclerView1(View v) {
+        startActivity(new Intent(this, UIRecyclerView1Activity.class));
+    }
+
+    //基础gridView-recyclerView2
+    protected void recyclerView2(View v) {
+        startActivity(new Intent(this, UIRecyclerView2Activity.class));
+    }
+
     //基础gridView
     protected void baseGridView(View v) {
         startActivity(new Intent(this, UIBaseGridViewActivity.class));
@@ -110,4 +120,8 @@ public class UIMainActivity extends AppCompatActivity {
         startActivity(new Intent(this, UIFragment2Activity.class));
     }
 
+    //其他-EditText输入监听
+    protected void editTextWatcher(View v) {
+        startActivity(new Intent(this, UIEditTextWatchActivity.class));
+    }
 }
